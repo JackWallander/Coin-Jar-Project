@@ -64,7 +64,7 @@ namespace Coin_Jar_Project
     class CoinJar
     {
         List<Coin> coins = new List<Coin>();
-        public void AddCoin(Coin coin)
+        public static void AddCoin(Coin coin)
         {
             for (int i = 0; i < coin.Count; i++)
             {
