@@ -63,20 +63,18 @@ namespace Coin_Jar_Project
     }
     class CoinJar
     {
-        List<Coin> coins = new List<Coin>();
+        static List<Coin> coins = new List<Coin>();
         public static void AddCoin(Coin coin)
         {
-            for (int i = 0; i < coin.Count; i++)
-            {
                 coins.Add(coin);
-            }
         }
-        public static decimal Total(Coin[] coins)
+
+        public static decimal Total()
         {
             decimal total = 0;
-            for (int i = 0; i < coins.Length; i++)
+            foreach (Coin coin in coins)
             {
-                total += coins[i].GetValue();
+                total += coin.GetValue();
             }
             return total;
         }
